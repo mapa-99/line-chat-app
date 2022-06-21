@@ -1,19 +1,18 @@
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './App.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Login from './containers/Login';
-import Register from './containers/Register';
+import Chat from "./containers/Chat";
+import InitForm from "./containers/InitForm";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path='register' element={<Register />} />
+          <Route path="/form" element={<InitForm />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </div>
-
     </BrowserRouter>
   );
 }
